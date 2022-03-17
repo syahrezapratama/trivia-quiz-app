@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #293164;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Karla', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  background-color: #f5f7fb;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #293164;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin: 0 10px 30px 10px;
+}
+
+.start-button {
+  width: 200px;
+  height: 50px;
+  background-color: #293164;
+  border: none;
+  border-radius: 10px;
+  color: #f5f7fb;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.question-box {
+  width: 500px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdef0;
+}
+
+.question {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.choices-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  
+}
+
+input {
+  display: none;
+}
+
+.choices {
+  width: 110px;
+  height: 30px;
+  border: 0.8px solid #4d5b9e;
+  border-radius: 8px;
+  color: #293164;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #d6dbf5;
+  border: none;
+}
+
+.wrong {
+  background-color: #f8bcbc;
+  border: none;
+}
+
+.right {
+  background-color: #94d7a2;
+  border: none;
+}
+
+.button-container {
+  margin: 20px 20px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button-check {
+  width: 150px;
+  height: 40px;
+  background-color: #4d5b9e;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Karla', sans-serif;
+  color: #f5f7fb;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.score {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin-right: 20px;
 }
