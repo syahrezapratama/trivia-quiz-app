@@ -146,6 +146,7 @@ function App() {
       {!started ? 
         <Start startGame={startGame} /> : 
         <div>
+          <h1 className='title'>Geo Trivia Quiz</h1>
           {questionElements}
           <div className='button-container'>
             {isFinished && <h4 className='score'>You scored {correctAnswers}/5 correct answers!</h4>}

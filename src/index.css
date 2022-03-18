@@ -1,19 +1,18 @@
 body {
   margin: 0;
-  background-color: #293164;
+  background-color: #f5f7fb;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Karla', sans-serif;
+  padding: 20px;
 }
 
 .App {
-  width: 600px;
+  max-width: 600px;
   height: 600px;
-  margin-top: 20px;
   background-color: #f5f7fb;
   border: none;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,8 +52,8 @@ body {
 }
 
 .question-box {
-  width: 500px;
-  padding-bottom: 10px;
+  width: 100%;
+  padding: 5px 0 20px 0;
   border-bottom: 1px solid #dbdef0;
 }
 
