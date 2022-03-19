@@ -16,11 +16,11 @@ function App() {
 
 
   useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=5&category=22&difficulty=easy&type=multiple")
-      .then(res => res.json())
-      .then(data => {
-        const resultData = data.results;
-        //shuffle answers
+    async function getQuestions() {
+      try {
+        const res = await fetch('https://opentdb.com/api.php?amount=5&category=22&difficulty=easy&type=multiple');
+        const toJSON = await res.json();
+        const resultData = toJSON.results;
         for (let i = 0; i < resultData.length; i++) {
           const shuffledAnswers = arrayShuffle([
             {
@@ -69,10 +69,11 @@ function App() {
             ]
           });
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.log(error);
-      })
+      }
+    }
+    getQuestions();
   }, [newGame]);
 
   useEffect(() => {
@@ -148,7 +149,7 @@ function App() {
         <div>
           <h1 className='title'>Geo Trivia Quiz</h1>
           {questionElements}
-          <div className='button-container'>
+          <div className='buttonContainer'>
             {isFinished && <h4 className='score'>You scored {correctAnswers}/5 correct answers!</h4>}
             {(started && !isFinished) ?
               <Button checkAnswers={checkAnswers} title="Check answers" /> :
